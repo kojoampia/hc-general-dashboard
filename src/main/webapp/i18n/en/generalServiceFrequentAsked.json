@@ -1,0 +1,35 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFrequentAsked": {
+      "home": {
+        "title": "Frequently Asked Questions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Frequently Asked",
+        "createOrEditLabel": "Create or edit a Frequently Asked",
+        "search": "Search for Frequently Asked",
+        "notFound": "No Frequently Asked Questions found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Frequently Asked {{ id }}?"
+      },
+      "detail": {
+        "title": "Frequently Asked"
+      },
+      "id": "ID",
+      "question": "Question",
+      "answer": "Answer",
+      "category": "Category",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "modifiedDate": "Modified Date",
+      "modifiedBy": "Modified By"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFrequentAsked": {
+      "created": "A new Frequently Asked is created with identifier {{ param }}",
+      "updated": "A Frequently Asked is updated with identifier {{ param }}",
+      "deleted": "A Frequently Asked is deleted with identifier {{ param }}"
+    }
+  }
+}

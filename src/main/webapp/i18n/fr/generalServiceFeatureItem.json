@@ -1,0 +1,30 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFeatureItem": {
+      "home": {
+        "title": "FeatureItems",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Feature Item",
+        "createOrEditLabel": "Créer ou éditer un Feature Item",
+        "search": "Recherche pour Feature Item",
+        "notFound": "Aucun Feature Item trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Feature Item {{ id }} ?"
+      },
+      "detail": {
+        "title": "Feature Item"
+      },
+      "id": "ID",
+      "name": "Name",
+      "photo": "Photo"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFeatureItem": {
+      "created": "Un nouveau Feature Item a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Feature Item avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Feature Item avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

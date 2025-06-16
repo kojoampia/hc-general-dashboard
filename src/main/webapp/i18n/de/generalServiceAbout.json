@@ -1,0 +1,35 @@
+{
+  "generalDashboardApp": {
+    "generalServiceAbout": {
+      "home": {
+        "title": "Wir über uns",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Eintrag erstellen",
+        "createOrEditLabel": "Eintrag erstellen oder bearbeiten",
+        "search": "Suche nach Einträge",
+        "notFound": "Keine Einträge gefunden"
+      },
+      "delete": {
+        "question": "Soll den Eintrag {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Wir über uns"
+      },
+      "id": "ID",
+      "title": "Titel",
+      "content": "Inhalt",
+      "language": "Sprache",
+      "createdDate": "Datum erstellt",
+      "modifiedDate": "Datum modifiziert",
+      "createdBy": "Erstellt von:",
+      "modifiedBy": "Modifiziert von:"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceAbout": {
+      "created": "Eintrag erstellt mit ID {{ param }}",
+      "updated": "Eintrag aktualisiert mit ID {{ param }}",
+      "deleted": "Eintrag gelöscht mit ID {{ param }}"
+    }
+  }
+}

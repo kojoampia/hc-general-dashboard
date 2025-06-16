@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  hc-general-dashboard:
+    image: hc-general-dashboard
+    container_name: hc-general-dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - './hc-general-dashboard:/usr/src/app'
+    ports:
+      - 127.0.0.1:5512:80
+    networks:
+      - devnet
+
+networks:
+  devnet:
+    external:
+      name: devnet

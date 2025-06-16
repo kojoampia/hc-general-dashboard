@@ -1,0 +1,30 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFeatureItem": {
+      "home": {
+        "title": "Feature Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Feature Item",
+        "createOrEditLabel": "Create or edit a Feature Item",
+        "search": "Search for Feature Item",
+        "notFound": "No Feature Items found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Feature Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Feature Item"
+      },
+      "id": "ID",
+      "name": "Name",
+      "photo": "Photo"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFeatureItem": {
+      "created": "A new Feature Item is created with identifier {{ param }}",
+      "updated": "A Feature Item is updated with identifier {{ param }}",
+      "deleted": "A Feature Item is deleted with identifier {{ param }}"
+    }
+  }
+}

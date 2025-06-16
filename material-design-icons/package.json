@@ -1,0 +1,35 @@
+{
+  "name": "material-design-icons",
+  "version": "3.0.1",
+  "description": "Material Design icons by Google",
+  "keywords": [
+    "icons",
+    "material",
+    "material-design",
+    "google"
+  ],
+  "homepage": "https://github.com/google/material-design-icons",
+  "bugs": {
+    "url": "https://github.com/google/material-design-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/google/material-design-icons"
+  },
+  "license": "Apache-2.0",
+  "author": "Material Design Authors",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-core": "^6.1.2",
+    "babel-preset-es2015": "^6.1.2",
+    "gulp": "^3.9.0",
+    "gulp-if": "^2.0.0",
+    "gulp-svg-sprite": "^1.2.14",
+    "lodash": "^3.10.1",
+    "sprity": "^1.0.8",
+    "sprity-gm": "^1.0.2",
+    "through2": "^2.0.0",
+    "underscore.string": "^3.2.2",
+    "vinyl": "^1.1.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "generalDashboardApp": {
+    "generalServiceAbout": {
+      "home": {
+        "title": "À propos de nous",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Enregistrement",
+        "createOrEditLabel": "Créer ou éditer un Enregistrement",
+        "search": "Recherche pour Dossiers",
+        "notFound": "Aucun enregistrement trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le About {{ id }} ?"
+      },
+      "detail": {
+        "title": "À propos de"
+      },
+      "id": "ID",
+      "title": "Titre",
+      "content": "Contenu",
+      "language": "Langue",
+      "createdDate": "Date de création",
+      "modifiedDate": "Date modifiée",
+      "createdBy": "Créé par",
+      "modifiedBy": "Modifié par"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceAbout": {
+      "created": "Un nouveau Enregistrement a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Enregistrement avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Enregistrement avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "home": {
+    "title": "Welcome to Health Connect!",
+    "header": "Integrated tools and processes for a digital enabled mobile health service",
+    "subtitle": "Your health improvement service platform",
+    "logged": {
+      "message": "You are logged in as user \"{{username}}\"."
+    },
+    "question": "If you have any question on Health Connect:",
+    "link": {
+      "homepage": "Health Connect by JojoAddison.Net",
+      "stackoverflow": "JojoAddison.Net on Stack Overflow",
+      "bugtracker": "JojoAddison.Net bug tracker",
+      "chat": "JojoAddison.Net public chat room",
+      "follow": "follow @jojoaddison on Twitter"
+    },
+    "like": "If you like Health Connect by JojoAddison.Net, don't forget to give us a star on",
+    "github": "GitHub"
+  }
+}

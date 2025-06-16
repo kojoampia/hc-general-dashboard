@@ -1,0 +1,34 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFeature": {
+      "home": {
+        "title": "Features",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Feature",
+        "createOrEditLabel": "Create or edit a Feature",
+        "search": "Search for Feature",
+        "notFound": "No Features found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Feature {{ id }}?"
+      },
+      "detail": {
+        "title": "Feature"
+      },
+      "id": "ID",
+      "name": "Name",
+      "items": "Items",
+      "createdDate": "Created Date",
+      "modifiedDate": "Modified Date",
+      "createdBy": "Created By",
+      "modifiedBy": "Modified By"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFeature": {
+      "created": "A new Feature is created with identifier {{ param }}",
+      "updated": "A Feature is updated with identifier {{ param }}",
+      "deleted": "A Feature is deleted with identifier {{ param }}"
+    }
+  }
+}

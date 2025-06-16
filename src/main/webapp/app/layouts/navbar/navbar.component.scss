@@ -1,0 +1,64 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+/* ==========================================================================
+Navbar
+========================================================================== */
+.navbar-toggler {
+  color: $primary;
+}
+.navbar-brand {
+  background-color: #fff;
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+.navbar-title {
+  color: $primary;
+}
+.navbar-version {
+  font-size: 0.65em;
+  color:  #ddd; /*$navbar-dark-color;*/
+  text-transform: none;
+}
+
+.profile-image {
+  height: 1.75em;
+  width: 1.75em;
+}
+
+.navbar {
+  padding: 0.2rem 1rem;
+  color: $primary; 
+  text-transform: uppercase;
+  a.nav-link {
+    font-weight: 400;
+  }
+  a:hover, .active {
+    background-color: $primary;
+    color: black !important;
+    border-radius: 10px;
+  }
+  
+}
+.active {
+  background-color: $primary;
+  color: black !important;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.logo-img {
+  height: 45px;
+  width: 45px;
+  color: $primary; 
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../../../content/images/logo.png') no-repeat center center;
+  background-size: contain;
+}

@@ -1,0 +1,51 @@
+{
+  "generalDashboardApp": {
+    "generalServiceContact": {
+      "home": {
+        "title": "Contact us",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Contact",
+        "createOrEditLabel": "Create or edit a Contact",
+        "search": "Search for Contact",
+        "notFound": "No Record found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Contact {{ id }}?"
+      },
+      "detail": {
+        "title": "Contact"
+      },
+      "id": "ID",
+      "title": "Title",
+      "address": "Address",
+      "street": "Street",
+      "code": "Code",
+      "city": "City",
+      "state": "State",
+      "region": "Region",
+      "country": "Country",
+      "telephone": "Telephone",
+      "email": "Email",
+      "whatsapp": "Whatsapp",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "google": "Google",
+      "youtube": "Youtube",
+      "lastModified": "Last Modified",
+      "lastModifiedBy": "Last Modified By",
+      "language": "Language",
+      "appointment": "Appointment",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "image": "Image",
+      "url": "Url"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceContact": {
+      "created": "A new Contact is created with identifier {{ param }}",
+      "updated": "A Contact is updated with identifier {{ param }}",
+      "deleted": "A Contact is deleted with identifier {{ param }}"
+    }
+  }
+}

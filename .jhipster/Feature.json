@@ -1,0 +1,40 @@
+{
+  "changelogDate": "20220525233057",
+  "clientRootFolder": "GeneralService",
+  "databaseType": "mongodb",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "items",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "modifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "GeneralService",
+  "microservicePath": "../general-service",
+  "name": "Feature",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

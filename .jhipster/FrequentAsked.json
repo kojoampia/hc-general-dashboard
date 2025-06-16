@@ -1,0 +1,44 @@
+{
+  "changelogDate": "20220525203057",
+  "clientRootFolder": "GeneralService",
+  "databaseType": "mongodb",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "question",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "answer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "modifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "GeneralService",
+  "microservicePath": "../general-service",
+  "name": "FrequentAsked",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": true,
+  "service": "serviceClass"
+}

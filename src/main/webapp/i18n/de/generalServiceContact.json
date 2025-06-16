@@ -1,0 +1,51 @@
+{
+  "generalDashboardApp": {
+    "generalServiceContact": {
+      "home": {
+        "title": "Wie Sie uns erreichen",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Eintrag erstellen",
+        "createOrEditLabel": "Eintrag erstellen oder bearbeiten",
+        "search": "Suche nach Einträge",
+        "notFound": "Keine Einträge gefunden"
+      },
+      "delete": {
+        "question": "Soll Eintrag {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Wie Sie uns erreichen"
+      },
+      "id": "ID",
+      "title": "Titel",
+      "address": "Adresse",
+      "street": "Straße",
+      "code": "ZIP-Code",
+      "city": "Stadt",
+      "state": "Bundesland",
+      "region": "Region",
+      "country": "Land",
+      "telephone": "Telefon",
+      "email": "Email",
+      "whatsapp": "Whatsapp",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "google": "Google",
+      "youtube": "Youtube",
+      "lastModified": "Last Modified",
+      "lastModifiedBy": "Last Modified By",
+      "language": "Sprache",
+      "appointment": "Appointment",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "image": "Image",
+      "url": "Url"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceContact": {
+      "created": "Eintrag erstellt mit ID {{ param }}",
+      "updated": "Eintrag aktualisiert mit ID {{ param }}",
+      "deleted": "Eintrag gelöscht mit ID {{ param }}"
+    }
+  }
+}

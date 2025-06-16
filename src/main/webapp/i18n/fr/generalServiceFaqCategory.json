@@ -1,0 +1,33 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFaqCategory": {
+      "home": {
+        "title": "FaqCategories",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Faq Category",
+        "createOrEditLabel": "Créer ou éditer un Faq Category",
+        "search": "Recherche pour Faq Category",
+        "notFound": "Aucun Faq Category trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Faq Category {{ id }} ?"
+      },
+      "detail": {
+        "title": "Faq Category"
+      },
+      "id": "ID",
+      "label": "Label",
+      "description": "Description",
+      "matIcon": "Mat Icon",
+      "color": "Color",
+      "svgIcon": "Svg Icon"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFaqCategory": {
+      "created": "Un nouveau Faq Category a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Faq Category avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Faq Category avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

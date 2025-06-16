@@ -1,0 +1,37 @@
+<div class="row m-5 justify-content-center">
+  <div class="col-md-3">
+    <div class="card jh-card">
+      <h2 id="page-heading" data-cy="FeatureHeading">
+        <span jhiTranslate="generalDashboardApp.generalServiceFeature.home.title">Features</span>
+      </h2>
+      <ul class="list-group text-left">
+        <li class="list-group-item btn" (click)="select('professional')"
+          [ngClass]="{active: selectedFeature=='professional'}">
+          Professional
+        </li>
+        <li class="list-group-item btn" (click)="select('patient')" [ngClass]="{active: selectedFeature=='patient'}">
+          Patient
+        </li>
+        <li class="list-group-item btn" (click)="select('vendor')" [ngClass]="{active: selectedFeature=='vendor'}">
+          Vendor
+        </li>
+        <li class="list-group-item btn" (click)="select('admin')" [ngClass]="{active: selectedFeature=='admin'}">
+          Admin
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-9">
+    <div class="card jh-card">
+      <div class="card-header">
+        <h2 id="page-heading" data-cy="FeatureHeading">
+        {{selectedName}}
+      </h2>
+      </div>
+      <div class="card-body">
+        <iframe [src]="safeUrl" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

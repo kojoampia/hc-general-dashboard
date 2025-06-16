@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="feature">
+      <h2 data-cy="featureDetailsHeading"><span jhiTranslate="generalDashboardApp.generalServiceFeature.detail.title">Feature</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ feature.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFeature.name">Name</span></dt>
+        <dd>
+          <span>{{ feature.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFeature.items">Items</span></dt>
+        <dd>
+          <span>{{ feature.items }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFeature.createdDate">Created Date</span></dt>
+        <dd>
+          <span>{{ feature.createdDate | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFeature.modifiedDate">Modified Date</span></dt>
+        <dd>
+          <span>{{ feature.modifiedDate | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFeature.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ feature.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFeature.modifiedBy">Modified By</span></dt>
+        <dd>
+          <span>{{ feature.modifiedBy }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/feature', feature.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

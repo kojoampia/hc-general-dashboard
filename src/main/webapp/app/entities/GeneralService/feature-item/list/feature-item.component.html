@@ -1,0 +1,117 @@
+<div>
+  <h2 id="page-heading" data-cy="FeatureItemHeading">
+    <span jhiTranslate="generalDashboardApp.generalServiceFeatureItem.home.title">Feature Items</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="generalDashboardApp.generalServiceFeatureItem.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-feature-item"
+        [routerLink]="['/feature-item/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="generalDashboardApp.generalServiceFeatureItem.home.createLabel">
+          Create a new Feature Item
+        </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="generalDashboardApp.generalServiceFeatureItem.home.search"
+          >Query</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'generalDashboardApp.generalServiceFeatureItem.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        <button class="btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+          <fa-icon icon="trash-alt"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="featureItems?.length === 0">
+    <span jhiTranslate="generalDashboardApp.generalServiceFeatureItem.home.notFound">No featureItems found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="featureItems && featureItems.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="generalDashboardApp.generalServiceFeatureItem.name">Name</span></th>
+          <th scope="col"><span jhiTranslate="generalDashboardApp.generalServiceFeatureItem.photo">Photo</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let featureItem of featureItems; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/feature-item', featureItem.id, 'view']">{{ featureItem.id }}</a>
+          </td>
+          <td>{{ featureItem.name }}</td>
+          <td>
+            <a *ngIf="featureItem.photo" (click)="openFile(featureItem.photo, featureItem.photoContentType)">
+              <img
+                [src]="'data:' + featureItem.photoContentType + ';base64,' + featureItem.photo"
+                style="max-height: 30px"
+                alt="featureItem image"
+              />
+            </a>
+            <span *ngIf="featureItem.photo">{{ featureItem.photoContentType }}, {{ byteSize(featureItem.photo) }}</span>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/feature-item', featureItem.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/feature-item', featureItem.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(featureItem)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

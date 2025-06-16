@@ -1,0 +1,35 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFrequentAsked": {
+      "home": {
+        "title": "Questions fréquemment posées",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Questions fréquemment posées",
+        "createOrEditLabel": "Créer ou éditer un Questions fréquemment posées",
+        "search": "Recherche pour Questions fréquemment posées",
+        "notFound": "Aucun Questions fréquemment posées trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Questions fréquemment posées {{ id }} ?"
+      },
+      "detail": {
+        "title": "Questions fréquemment posées"
+      },
+      "id": "ID",
+      "question": "Question",
+      "answer": "Answer",
+      "category": "Category",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "modifiedDate": "Modified Date",
+      "modifiedBy": "Modified By"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFrequentAsked": {
+      "created": "Un nouveau Questions fréquemment posées a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Questions fréquemment posées avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Questions fréquemment posées avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

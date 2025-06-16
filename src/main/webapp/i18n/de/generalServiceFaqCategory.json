@@ -1,0 +1,33 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFaqCategory": {
+      "home": {
+        "title": "Faq Categories",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Faq Category erstellen",
+        "createOrEditLabel": "Faq Category erstellen oder bearbeiten",
+        "search": "Suche nach Faq Category",
+        "notFound": "Keine Faq Categories gefunden"
+      },
+      "delete": {
+        "question": "Soll Faq Category {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Faq Category"
+      },
+      "id": "ID",
+      "label": "Label",
+      "description": "Description",
+      "matIcon": "Mat Icon",
+      "color": "Color",
+      "svgIcon": "Svg Icon"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFaqCategory": {
+      "created": "Faq Category erstellt mit ID {{ param }}",
+      "updated": "Faq Category aktualisiert mit ID {{ param }}",
+      "deleted": "Faq Category gelöscht mit ID {{ param }}"
+    }
+  }
+}

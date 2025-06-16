@@ -1,0 +1,35 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFrequentAsked": {
+      "home": {
+        "title": "Häufig gestellte Fragen",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Oft gestellte Frage erstellen",
+        "createOrEditLabel": "Oft gestellte Frage erstellen oder bearbeiten",
+        "search": "Suche nach oft gestellte Frage",
+        "notFound": "Keine Häufig gestellte Fragen gefunden"
+      },
+      "delete": {
+        "question": "Soll oft gestellte Frage {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Oft gestellte Frage"
+      },
+      "id": "ID",
+      "question": "Question",
+      "answer": "Answer",
+      "category": "Category",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "modifiedDate": "Modified Date",
+      "modifiedBy": "Modified By"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFrequentAsked": {
+      "created": "Oft gestellte Frage erstellt mit ID {{ param }}",
+      "updated": "Oft gestellte Frage aktualisiert mit ID {{ param }}",
+      "deleted": "Oft gestellte Frage gelöscht mit ID {{ param }}"
+    }
+  }
+}

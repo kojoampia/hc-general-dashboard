@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="frequentAsked">
+      <h2 data-cy="frequentAskedDetailsHeading">
+        <span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.detail.title">Frequent Asked</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ frequentAsked.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.question">Question</span></dt>
+        <dd>
+          <span>{{ frequentAsked.question }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.answer">Answer</span></dt>
+        <dd>
+          <span>{{ frequentAsked.answer }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.category">Category</span></dt>
+        <dd>
+          <span>{{ frequentAsked.category }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.createdDate">Created Date</span></dt>
+        <dd>
+          <span>{{ frequentAsked.createdDate | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ frequentAsked.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.modifiedDate">Modified Date</span></dt>
+        <dd>
+          <span>{{ frequentAsked.modifiedDate | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="generalDashboardApp.generalServiceFrequentAsked.modifiedBy">Modified By</span></dt>
+        <dd>
+          <span>{{ frequentAsked.modifiedBy }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/frequent-asked', frequentAsked.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

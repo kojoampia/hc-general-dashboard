@@ -1,0 +1,364 @@
+
+.professional {
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid teal;
+    height: 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    background-size: contain;
+}
+.professionalName {
+    transform: rotate(-90deg);
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    line-height: 90px;
+    height: 50%;
+    width: 200px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: -35px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1) rotate(-90deg);
+        background-color: white;
+        color: teal;
+    }
+}
+
+.professionalItem {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    border-radius: 15px;
+    background-color: teal;
+    width: 25%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 5px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: teal;
+    }
+}
+
+
+.feature {
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid teal;
+    height: 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    background-size: contain;
+}
+.featureName {
+    transform: rotate(-90deg);
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    line-height: 90px;
+    height: 50%;
+    width: 200px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: -35px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1) rotate(-90deg);
+        background-color: white;
+        color: teal;
+    }
+}
+
+.featureItem {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    border-radius: 15px;
+    background-color: teal;
+    width: 25%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 5px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: teal;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (-moz-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    .feature {
+        padding-right: 5px;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border: 5px solid teal;
+        height: 200px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 10px;
+        background-size: contain;
+    }
+    
+.featureName {
+    transform: rotate(-90deg);
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    line-height: 90px;
+    height: 50%;
+    width: 200px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: -15px;
+    background-size: contain;
+}
+
+.featureItem {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    border-radius: 15px;
+    background-color: teal;
+    width: 25%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 5px;
+    background-size: contain;
+}
+}
+
+.patient {
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid darkolivegreen;
+    height: 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    background-size: contain;
+}
+.patientName {
+    transform: rotate(-90deg);
+    background-color: darkolivegreen;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    line-height: 90px;
+    height: 50%;
+    width: 200px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: -35px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1) rotate(-90deg);
+        background-color: white;
+        color: darkolivegreen;
+    }
+}
+
+.patientItem {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    border-radius: 15px;
+    background-color: darkolivegreen;
+    width: 25%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 5px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: darkolivegreen;
+    }
+}
+
+.vendor {
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid darkslategray;
+    height: 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    background-size: contain;
+}
+.vendorName {
+    transform: rotate(-90deg);
+    background-color: darkslategray;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    line-height: 90px;
+    height: 50%;
+    width: 200px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: -35px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1) rotate(-90deg);
+        background-color: white;
+        color: darkslategray;
+    }
+}
+
+.vendorItem {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    border-radius: 15px;
+    background-color: darkslategray;
+    width: 25%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 5px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: darkslategray;
+    }
+}
+
+.admin {
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid lightseagreen;
+    height: 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    background-size: contain;
+}
+.adminName {
+    transform: rotate(-90deg);
+    background-color: lightseagreen;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    line-height: 90px;
+    height: 50%;
+    width: 200px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: -35px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1) rotate(-90deg);
+        background-color: white;
+        color: lightseagreen;
+    }
+}
+
+.adminItem {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    border-radius: 15px;
+    background-color: lightseagreen;
+    width: 20%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin-left: 5px;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: lightseagreen;
+    }
+}
+
+*:focus {
+  outline: none;
+}

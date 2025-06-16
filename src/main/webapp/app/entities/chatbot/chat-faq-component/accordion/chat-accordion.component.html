@@ -1,0 +1,8 @@
+<div *ngIf="faq">
+    <div class="header d-flex justify-content-between" (click)="togglePanel()">
+        {{faq.question}} 
+        <fa-icon *ngIf="!isPanelOpen" icon="chevron-down" class="mr-2"></fa-icon>
+        <fa-icon *ngIf="isPanelOpen" icon="chevron-up" class="mr-2"></fa-icon>
+    </div>
+    <div class="panel" *ngIf="isPanelOpen">{{faq.answer}}</div>
+</div>

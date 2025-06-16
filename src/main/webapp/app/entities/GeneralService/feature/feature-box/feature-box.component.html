@@ -1,0 +1,6 @@
+<div [class]="featureBox" *ngIf="feature">
+    <div [class]="featureName" (click)="openFeature(feature)">{{ feature?.name }}</div>
+    <div [class]="featureItem" *ngFor="let item of feature?.items" (click)="openFeature(item)">
+        {{item.name}}
+    </div>
+</div>

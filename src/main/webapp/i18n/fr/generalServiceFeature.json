@@ -1,0 +1,34 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFeature": {
+      "home": {
+        "title": "Fonctionnalités",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Enregistrement",
+        "createOrEditLabel": "Créer ou éditer un Enregistrement",
+        "search": "Recherche pour Dossiers",
+        "notFound": "Aucun enregistrement trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Enregistrement {{ id }} ?"
+      },
+      "detail": {
+        "title": "Feature"
+      },
+      "id": "ID",
+      "name": "Nom",
+      "items": "Articles",
+      "createdDate": "Date de création",
+      "modifiedDate": "Date modifiée",
+      "createdBy": "Créé par",
+      "modifiedBy": "Modifié par"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFeature": {
+      "created": "Un nouveau Enregistrement a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Enregistrement avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Enregistrement avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

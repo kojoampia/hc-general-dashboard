@@ -1,0 +1,33 @@
+{
+  "generalDashboardApp": {
+    "generalServiceFaqCategory": {
+      "home": {
+        "title": "FAQ Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new FAQ Category",
+        "createOrEditLabel": "Create or edit a FAQ Category",
+        "search": "Search for FAQ Category",
+        "notFound": "No FAQ Categories found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete FAQ Category {{ id }}?"
+      },
+      "detail": {
+        "title": "FAQ Category"
+      },
+      "id": "ID",
+      "label": "Label",
+      "description": "Description",
+      "matIcon": "Mat Icon",
+      "color": "Color",
+      "svgIcon": "Svg Icon"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceFaqCategory": {
+      "created": "A new FAQ Category is created with identifier {{ param }}",
+      "updated": "A FAQ Category is updated with identifier {{ param }}",
+      "deleted": "A FAQ Category is deleted with identifier {{ param }}"
+    }
+  }
+}

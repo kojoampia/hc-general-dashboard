@@ -1,0 +1,51 @@
+{
+  "generalDashboardApp": {
+    "generalServiceContact": {
+      "home": {
+        "title": "Contact",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Enregistrement",
+        "createOrEditLabel": "Créer ou éditer un Enregistrement",
+        "search": "Recherche pour Dossiers",
+        "notFound": "Aucun enregistrement trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Enregistrement {{ id }} ?"
+      },
+      "detail": {
+        "title": "Contact"
+      },
+      "id": "ID",
+      "title": "Titre",
+      "address": "Adresse",
+      "street": "Rue",
+      "code": "Code Postal",
+      "city": "Ville",
+      "state": "État",
+      "region": "Région",
+      "country": "Country",
+      "telephone": "Telephone",
+      "email": "Email",
+      "whatsapp": "Whatsapp",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "google": "Google",
+      "youtube": "Youtube",
+      "lastModified": "Dernière modification",
+      "lastModifiedBy": "Dernière modification par",
+      "language": "Langue",
+      "appointment": "Rendez-vous",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "image": "Image",
+      "url": "URL"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceContact": {
+      "created": "Un nouveau Enregistrement a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Enregistrement avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Enregistrement avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "generalDashboardApp": {
+    "generalServiceAbout": {
+      "home": {
+        "title": "About us",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new About",
+        "createOrEditLabel": "Create or edit a About",
+        "search": "Search for About",
+        "notFound": "No Record found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete About {{ id }}?"
+      },
+      "detail": {
+        "title": "About"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "language": "Language",
+      "createdDate": "Created Date",
+      "modifiedDate": "Modified Date",
+      "createdBy": "Created By",
+      "modifiedBy": "Modified By"
+    }
+  },
+  "generalServiceApp": {
+    "generalServiceAbout": {
+      "created": "A new About is created with identifier {{ param }}",
+      "updated": "A About is updated with identifier {{ param }}",
+      "deleted": "A About is deleted with identifier {{ param }}"
+    }
+  }
+}
