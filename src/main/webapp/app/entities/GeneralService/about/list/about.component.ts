@@ -17,7 +17,7 @@ export class AboutComponent implements OnInit {
   // Load PDF Document
   safeUrl!: SafeHtml;
   title = 'Health Connect Project Brief';
-  url = '/content/files/HealthConnect_Project_Brief.pdf';
+  url = '/content/files/hc-project-brief.pdf';
   content!: string;
 
   constructor(protected aboutService: AboutService, private sanitizer: DomSanitizer) {}
