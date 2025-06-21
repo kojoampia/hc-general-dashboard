@@ -96,6 +96,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.admin.name = 'Admin';
     this.admin.url = '/features';
     this.admin.items = [];
+    this.admin.items.push(this.getFeatureItem('admin_user-account', 'UserAccount', this.admin.url));
     this.admin.items.push(this.getFeatureItem('admin_dashboard', 'Dashboard', this.admin.url));
     this.admin.items.push(this.getFeatureItem('admin_roster', 'Roster', this.admin.url));
     this.admin.items.push(this.getFeatureItem('admin_team', 'Team', this.admin.url));
