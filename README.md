@@ -3,7 +3,7 @@
 This application was generated using JHipster 7.7.0, you can find documentation and help at [https://www.jhipster.tech](https://www.jhipster.tech).
 
 This is a "gateway" application intended to be part of a microservice architecture, please refer to the [Doing microservices with JHipster][] page of the documentation for more information.
-This application is configured for Service Discovery and Configuration with . On launch, it will refuse to start if it is not able to connect to .
+This application is configured for Service Discovery and Configuration with . On launch, it will refuse to start if it is not able to connect to.
 
 ## Project Structure
 
