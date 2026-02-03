@@ -110,7 +110,6 @@ body.dark-mode {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  animation: titlePulse 2s ease-in-out infinite;
 }
 
 @keyframes titlePulse {
@@ -124,15 +123,15 @@ body.dark-mode {
 
 .title-icon {
   font-size: 3.5rem;
-  animation: rotate360 20s linear infinite;
+  animation: gentleFloat 4s ease-in-out infinite;
 }
 
-@keyframes rotate360 {
-  from {
-    transform: rotate(0deg);
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-5px);
   }
 }
 

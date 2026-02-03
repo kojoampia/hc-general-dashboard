@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   isDarkMode = false;
   Math = Math;
 
+  // TODO: Replace with real-time data from a metrics service
+  // These are placeholder values for demonstration purposes
   dashboardStats: DashboardStat[] = [
     { icon: '👥', value: '2,547', label: 'Active Users', color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', trend: 12.5 },
     { icon: '📅', value: '1,234', label: 'Appointments', color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', trend: 8.3 },
