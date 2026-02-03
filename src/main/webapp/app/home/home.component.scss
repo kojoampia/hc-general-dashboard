@@ -1,39 +1,137 @@
 /* ==========================================================================
-Main page styles
+Main page styles - Modern Dashboard Design
 ========================================================================== */
 .home {
-  min-height: 90vh;
-  min-width: 90vw;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow-x: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.3), transparent 50%);
+    pointer-events: none;
+  }
 }
-.header {
-  text-transform: uppercase;
+
+.hero-section {
+  position: relative;
+  padding: 4rem 2rem 3rem;
   text-align: center;
-  padding: 10px;
-  margin-top: 50px;
-  margin-left: 5%;
-  margin-right: 5%;
-  height: auto;
-  font-size: x-large;
-  font-weight: bold;
-  color: rgb(20, 103, 136);
-  line-height: 80px;
-  background-color: lightblue;
-  border-radius: 15px;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 0.8s ease-out;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  letter-spacing: 1px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.features-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 1;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+.feature-card-wrapper {
+  animation: fadeInUp 0.6s ease-out backwards;
+  
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
 }
 
 .healthconnect-box {
-  width: 640px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  max-width: 640px;
+  margin: 3rem auto 2rem;
+  padding: 2rem;
+  z-index: 1;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 1rem;
+  }
 }
 
 .healthconnect {
-  display: inline-block;
-  width: 640px;
+  display: block;
+  width: 100%;
+  max-width: 640px;
   height: 480px;
-  background: url('../../content/images/healthconnect.svg') no-repeat center top;
+  margin: 0 auto;
+  background: url('../../content/images/healthconnect.svg') no-repeat center center;
   background-size: contain;
+  opacity: 0.9;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+  
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
@@ -43,7 +141,7 @@ Main page styles
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
   .healthconnect {
-    background: url('../../content/images/healthconnect.svg') no-repeat center top;
+    background: url('../../content/images/healthconnect.svg') no-repeat center center;
     background-size: contain;
   }
 }
