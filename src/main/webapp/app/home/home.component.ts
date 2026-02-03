@@ -8,6 +8,14 @@ import { Account } from 'app/core/auth/account.model';
 import { Feature } from 'app/entities/GeneralService/feature/feature.model';
 import { FeatureItem } from 'app/entities/GeneralService/feature-item/feature-item.model';
 
+interface DashboardStat {
+  icon: string;
+  value: string;
+  label: string;
+  color: string;
+  trend: number;
+}
+
 @Component({
   selector: 'jhi-home',
   templateUrl: './home.component.html',
@@ -20,6 +28,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   patient: Feature = new Feature();
   vendor: Feature = new Feature();
   admin: Feature = new Feature();
+  isDarkMode = false;
+  Math = Math;
+
+  dashboardStats: DashboardStat[] = [
+    { icon: '👥', value: '2,547', label: 'Active Users', color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', trend: 12.5 },
+    { icon: '📅', value: '1,234', label: 'Appointments', color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', trend: 8.3 },
+    { icon: '📊', value: '98.5%', label: 'System Uptime', color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', trend: 2.1 },
+    { icon: '⚡', value: '156ms', label: 'Avg Response', color: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', trend: -5.2 }
+  ];
 
   private readonly destroy$ = new Subject<void>();
 
@@ -29,6 +46,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.patient.name = 'Patient';
     this.vendor.name = 'Vendor';
     this.admin.name = 'Admin';
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    this.isDarkMode = savedTheme === 'dark';
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+    }
   }
 
   ngOnInit(): void {
@@ -113,6 +137,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
+  toggleTheme(): void {
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
   getFeatureItem(fid: string, fname: string, url: string): FeatureItem {
     return { 
       ...new FeatureItem(), 
@@ -120,6 +155,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: fname,
       url: url ? url : '/content/' + fname.toLowerCase(),
     }
+  }
+
+  openFeature(feature: Feature | FeatureItem): void {
+    this.router.navigate([feature.url], { queryParams: { name: feature.id } });
   }
 
 
