@@ -32,7 +32,6 @@
     justify-content: space-between;
     gap: 15px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: cardAppear 0.6s ease-out, pulse 3s ease-in-out infinite;
     position: relative;
     overflow: hidden;
 
@@ -56,6 +55,13 @@
         &::before {
             left: 100%;
         }
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .professional {
+        animation: cardAppear 0.6s ease-out, pulse 3s ease-in-out infinite;
     }
 }
 
@@ -146,13 +152,19 @@
     justify-content: space-between;
     gap: 15px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: cardAppear 0.6s ease-out;
     position: relative;
     overflow: hidden;
 
     &:hover {
         transform: translateY(-10px) scale(1.02);
         box-shadow: 0 20px 60px rgba(0, 128, 128, 0.5);
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .feature {
+        animation: cardAppear 0.6s ease-out;
     }
 }
 
@@ -242,7 +254,6 @@
     justify-content: space-between;
     gap: 15px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: cardAppear 0.8s ease-out, pulse 3s ease-in-out infinite 0.5s;
     position: relative;
     overflow: hidden;
 
@@ -266,6 +277,13 @@
         &::before {
             left: 100%;
         }
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .patient {
+        animation: cardAppear 0.8s ease-out, pulse 3s ease-in-out infinite 0.5s;
     }
 }
 
@@ -355,7 +373,6 @@
     justify-content: space-between;
     gap: 15px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: cardAppear 1s ease-out, pulse 3s ease-in-out infinite 1s;
     position: relative;
     overflow: hidden;
 
@@ -379,6 +396,13 @@
         &::before {
             left: 100%;
         }
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .vendor {
+        animation: cardAppear 1s ease-out, pulse 3s ease-in-out infinite 1s;
     }
 }
 
@@ -468,7 +492,6 @@
     justify-content: space-between;
     gap: 15px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: cardAppear 1.2s ease-out, pulse 3s ease-in-out infinite 1.5s;
     position: relative;
     overflow: hidden;
 
@@ -492,6 +515,13 @@
         &::before {
             left: 100%;
         }
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .admin {
+        animation: cardAppear 1.2s ease-out, pulse 3s ease-in-out infinite 1.5s;
     }
 }
 

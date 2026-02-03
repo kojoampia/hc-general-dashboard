@@ -40,9 +40,15 @@ Main page styles - Modern Animated Dashboard
   min-width: 100vw;
   background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
   padding-bottom: 50px;
   overflow-x: hidden;
+}
+
+/* Animate only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  .home {
+    animation: gradientShift 15s ease infinite;
+  }
 }
 
 .header {
@@ -55,6 +61,7 @@ Main page styles - Modern Animated Dashboard
   height: auto;
   font-size: 3rem;
   font-weight: 900;
+  color: #667eea; /* Fallback color */
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -62,7 +69,6 @@ Main page styles - Modern Animated Dashboard
   line-height: 1.2;
   position: relative;
   letter-spacing: 2px;
-  animation: floatAnimation 3s ease-in-out infinite;
   
   &::before {
     content: '';
@@ -75,8 +81,18 @@ Main page styles - Modern Animated Dashboard
       transparent, 
       rgba(255, 255, 255, 0.3), 
       transparent);
-    animation: shimmer 3s infinite;
     z-index: -1;
+  }
+}
+
+/* Animate only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  .header {
+    animation: floatAnimation 3s ease-in-out infinite;
+  }
+  
+  .header::before {
+    animation: shimmer 3s infinite;
   }
 }
 
@@ -84,7 +100,13 @@ Main page styles - Modern Animated Dashboard
   max-width: 640px;
   margin: 50px auto;
   padding: 20px;
-  animation: floatAnimation 4s ease-in-out infinite;
+}
+
+/* Animate only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  .healthconnect-box {
+    animation: floatAnimation 4s ease-in-out infinite;
+  }
 }
 
 .healthconnect {
