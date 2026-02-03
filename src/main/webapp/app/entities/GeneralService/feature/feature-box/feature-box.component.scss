@@ -228,66 +228,6 @@
     }
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .professional, .patient, .vendor, .admin, .feature {
-        margin: 15px 3% 20px 3%;
-        padding: 15px;
-    }
-
-    .professionalItem, .patientItem, .vendorItem, .adminItem, .featureItem {
-        font-size: 1.1rem;
-        min-height: 150px;
-    }
-
-    .professionalName, .patientName, .vendorName, .adminName, .featureName {
-        font-size: 1.3rem;
-        min-height: 150px;
-    }
-}
-
-@media (max-width: 768px) {
-    .professional, .patient, .vendor, .admin, .feature {
-        flex-direction: column;
-        padding: 15px;
-        gap: 10px;
-        min-height: auto;
-    }
-
-    .professionalName, .patientName, .vendorName, .adminName, .featureName {
-        writing-mode: horizontal-tb;
-        transform: rotate(0deg);
-        min-height: 60px;
-        width: 100%;
-        padding: 15px;
-        font-size: 1.4rem;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-
-    .professionalItem, .patientItem, .vendorItem, .adminItem, .featureItem {
-        width: 100%;
-        min-height: 100px;
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .professionalItem, .patientItem, .vendorItem, .adminItem, .featureItem {
-        min-height: 80px;
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    .professionalName, .patientName, .vendorName, .adminName, .featureName {
-        min-height: 50px;
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-}
-
 .patient {
     padding: 20px;
     margin: 20px 5% 30px 5%;
