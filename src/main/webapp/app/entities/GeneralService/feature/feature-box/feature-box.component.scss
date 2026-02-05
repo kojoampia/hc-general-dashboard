@@ -1,364 +1,696 @@
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 10px 40px rgba(0, 128, 128, 0.3);
+    }
+    50% {
+        box-shadow: 0 15px 50px rgba(0, 128, 128, 0.5);
+    }
+}
 
 .professional {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid teal;
-    height: 200px;
-    max-width: 100%;
+    padding: 20px;
+    margin: 20px 5% 30px 5%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 128, 128, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 128, 128, 0.3);
+    border-radius: 20px;
+    min-height: 220px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.professionalName {
-    transform: rotate(-90deg);
-    background-color: teal;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(0, 128, 128, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+    }
 
     &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: teal;
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(0, 128, 128, 0.5);
+        border-color: rgba(0, 255, 255, 0.6);
+        
+        &::before {
+            left: 100%;
+        }
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .professional {
+        animation: cardAppear 0.6s ease-out, pulse 3s ease-in-out infinite;
+    }
+}
+
+.professionalName {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    background: linear-gradient(135deg, #008080, #00b8b8);
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 3px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transform: rotate(180deg) scale(1.1);
+        background: linear-gradient(135deg, #00b8b8, #00ffff);
+        box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6);
     }
 }
 
 .professionalItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
     color: white;
-    border-radius: 15px;
-    background-color: teal;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #008080, #00a0a0);
+    flex: 1;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 128, 128, 0.3);
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
 
     &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: teal;
+        transform: translateY(-5px) scale(1.05);
+        background: linear-gradient(135deg, #00ffff, #008080);
+        box-shadow: 0 15px 35px rgba(0, 255, 255, 0.5);
+        
+        &::after {
+            width: 300px;
+            height: 300px;
+        }
     }
 }
 
 
 .feature {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid teal;
-    height: 200px;
-    max-width: 100%;
+    padding: 20px;
+    margin: 20px 5% 30px 5%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 128, 128, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 128, 128, 0.3);
+    border-radius: 20px;
+    min-height: 220px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.featureName {
-    transform: rotate(-90deg);
-    background-color: teal;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 90px;
-    height: 40%;
-    width: 266px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 
     &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: teal;
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(0, 128, 128, 0.5);
     }
 }
 
-.featureItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-    border-radius: 15px;
-    background-color: teal;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: teal;
-    }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
     .feature {
-        padding-right: 5px;
-        margin-top: 5%;
-        margin-left: 5%;
-        margin-right: 5%;
-        border: 5px solid teal;
-        height: 200px;
-        max-width: 100%;
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        border-radius: 10px;
-        background-size: contain;
+        animation: cardAppear 0.6s ease-out;
     }
-    
+}
+
 .featureName {
-    transform: rotate(-90deg);
-    background-color: teal;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    background: linear-gradient(135deg, #008080, #00b8b8);
     color: white;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 900;
+    font-size: 1.5rem;
     text-align: center;
-    line-height: 90px;
-    height: 50%;
-    width: 200px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -15px;
-    background-size: contain;
+    padding: 20px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 128, 128, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 3px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transform: rotate(180deg) scale(1.1);
+        background: linear-gradient(135deg, #00b8b8, #00ffff);
+        box-shadow: 0 8px 25px rgba(0, 255, 255, 0.6);
+    }
 }
 
 .featureItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
     color: white;
-    border-radius: 15px;
-    background-color: teal;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #008080, #00a0a0);
+    flex: 1;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-}
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 128, 128, 0.3);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    &:hover {
+        transform: translateY(-5px) scale(1.05);
+        background: linear-gradient(135deg, #00ffff, #008080);
+        box-shadow: 0 15px 35px rgba(0, 255, 255, 0.5);
+        
+        &::after {
+            width: 300px;
+            height: 300px;
+        }
+    }
 }
 
 .patient {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid darkolivegreen;
-    height: 200px;
-    max-width: 100%;
+    padding: 20px;
+    margin: 20px 5% 30px 5%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(85, 107, 47, 0.3);
+    box-shadow: 0 10px 40px rgba(85, 107, 47, 0.3);
+    border-radius: 20px;
+    min-height: 220px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.patientName {
-    transform: rotate(-90deg);
-    background-color: darkolivegreen;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(85, 107, 47, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+    }
 
     &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: darkolivegreen;
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(85, 107, 47, 0.5);
+        border-color: rgba(107, 142, 35, 0.6);
+        
+        &::before {
+            left: 100%;
+        }
     }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .patient {
+        animation: cardAppear 0.8s ease-out, pulse 3s ease-in-out infinite 0.5s;
+    }
+}
+
+.patientName {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    background: linear-gradient(135deg, #556b2f, #6b8e23);
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(85, 107, 47, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 3px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transform: rotate(180deg) scale(1.1);
+        background: linear-gradient(135deg, #6b8e23, #9acd32);
+        box-shadow: 0 8px 25px rgba(107, 142, 35, 0.6);
+    }
+  }
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+  
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
+}
+
+/* Professional Theme - Teal Gradient */
+.professional {
+  .feature-header {
+    background: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+  }
+  
+  .professionalItem {
+    background: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+  }
 }
 
 .patientItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
     color: white;
-    border-radius: 15px;
-    background-color: darkolivegreen;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #556b2f, #6b8e23);
+    flex: 1;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(85, 107, 47, 0.3);
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
 
     &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: darkolivegreen;
+        transform: translateY(-5px) scale(1.05);
+        background: linear-gradient(135deg, #9acd32, #556b2f);
+        box-shadow: 0 15px 35px rgba(107, 142, 35, 0.5);
+        
+        &::after {
+            width: 300px;
+            height: 300px;
+        }
     }
 }
 
+/* Vendor Theme - Dark Slate Gradient */
 .vendor {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid darkslategray;
-    height: 200px;
-    max-width: 100%;
+    padding: 20px;
+    margin: 20px 5% 30px 5%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(47, 79, 79, 0.3);
+    box-shadow: 0 10px 40px rgba(47, 79, 79, 0.3);
+    border-radius: 20px;
+    min-height: 220px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.vendorName {
-    transform: rotate(-90deg);
-    background-color: darkslategray;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(47, 79, 79, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+    }
 
     &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: darkslategray;
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(47, 79, 79, 0.5);
+        border-color: rgba(95, 158, 160, 0.6);
+        
+        &::before {
+            left: 100%;
+        }
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .vendor {
+        animation: cardAppear 1s ease-out, pulse 3s ease-in-out infinite 1s;
+    }
+}
+
+.vendorName {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    background: linear-gradient(135deg, #2f4f4f, #5f9ea0);
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(47, 79, 79, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 3px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transform: rotate(180deg) scale(1.1);
+        background: linear-gradient(135deg, #5f9ea0, #7dd3d8);
+        box-shadow: 0 8px 25px rgba(95, 158, 160, 0.6);
     }
 }
 
 .vendorItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
     color: white;
-    border-radius: 15px;
-    background-color: darkslategray;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #2f4f4f, #5f9ea0);
+    flex: 1;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(47, 79, 79, 0.3);
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
 
     &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: darkslategray;
+        transform: translateY(-5px) scale(1.05);
+        background: linear-gradient(135deg, #7dd3d8, #2f4f4f);
+        box-shadow: 0 15px 35px rgba(95, 158, 160, 0.5);
+        
+        &::after {
+            width: 300px;
+            height: 300px;
+        }
     }
 }
 
+/* Admin Theme - Light Sea Green Gradient */
 .admin {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid lightseagreen;
-    height: 200px;
-    max-width: 100%;
+    padding: 20px;
+    margin: 20px 5% 30px 5%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(32, 178, 170, 0.3);
+    box-shadow: 0 10px 40px rgba(32, 178, 170, 0.3);
+    border-radius: 20px;
+    min-height: 220px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.adminName {
-    transform: rotate(-90deg);
-    background-color: lightseagreen;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(32, 178, 170, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+    }
 
     &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: lightseagreen;
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(32, 178, 170, 0.5);
+        border-color: rgba(64, 224, 208, 0.6);
+        
+        &::before {
+            left: 100%;
+        }
+    }
+}
+
+/* Animations only if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .admin {
+        animation: cardAppear 1.2s ease-out, pulse 3s ease-in-out infinite 1.5s;
+    }
+}
+
+.adminName {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    background: linear-gradient(135deg, #20b2aa, #40e0d0);
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(32, 178, 170, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 3px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transform: rotate(180deg) scale(1.1);
+        background: linear-gradient(135deg, #40e0d0, #7fffd4);
+        box-shadow: 0 8px 25px rgba(64, 224, 208, 0.6);
     }
 }
 
 .adminItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
     color: white;
-    border-radius: 15px;
-    background-color: lightseagreen;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #20b2aa, #40e0d0);
+    flex: 1;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(32, 178, 170, 0.3);
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
 
     &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: lightseagreen;
+        transform: translateY(-5px) scale(1.05);
+        background: linear-gradient(135deg, #7fffd4, #20b2aa);
+        box-shadow: 0 15px 35px rgba(64, 224, 208, 0.5);
+        
+        &::after {
+            width: 300px;
+            height: 300px;
+        }
     }
 }
 
 *:focus {
-  outline: none;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .professional, .patient, .vendor, .admin, .feature {
+        margin: 15px 3% 20px 3%;
+        padding: 15px;
+    }
+
+    .professionalItem, .patientItem, .vendorItem, .adminItem, .featureItem {
+        font-size: 1.1rem;
+        min-height: 150px;
+    }
+
+    .professionalName, .patientName, .vendorName, .adminName, .featureName {
+        font-size: 1.3rem;
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .professional, .patient, .vendor, .admin, .feature {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+        min-height: auto;
+    }
+
+    .professionalName, .patientName, .vendorName, .adminName, .featureName {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        min-height: 60px;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.4rem;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .professionalItem, .patientItem, .vendorItem, .adminItem, .featureItem {
+        width: 100%;
+        min-height: 100px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .professionalItem, .patientItem, .vendorItem, .adminItem, .featureItem {
+        min-height: 80px;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .professionalName, .patientName, .vendorName, .adminName, .featureName {
+        min-height: 50px;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
 }

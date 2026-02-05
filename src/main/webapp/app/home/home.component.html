@@ -1,32 +1,28 @@
-<div class="modern-dashboard">
-  <!-- Animated Header with Gradient -->
-  <div class="dashboard-header">
-    <div class="header-content">
-      <h1 class="dashboard-title">
-        <span class="title-icon">🏥</span>
+<div class="home">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
         <span jhiTranslate="home.header"></span>
       </h1>
-      <p class="dashboard-subtitle">Transform Healthcare, One Connection at a Time</p>
-    </div>
-    <div class="theme-toggle" (click)="toggleTheme()" title="Toggle Dark Mode">
-      <span *ngIf="!isDarkMode">🌙</span>
-      <span *ngIf="isDarkMode">☀️</span>
+      <p class="hero-subtitle">Comprehensive Healthcare Management Platform</p>
     </div>
   </div>
-
-  <!-- Stats Overview Section -->
-  <div class="stats-container">
-    <div class="stat-card" *ngFor="let stat of dashboardStats">
-      <div class="stat-icon" [style.background]="stat.color">{{ stat.icon }}</div>
-      <div class="stat-content">
-        <div class="stat-value">{{ stat.value }}</div>
-        <div class="stat-label">{{ stat.label }}</div>
-      </div>
-      <div class="stat-trend" [class.positive]="stat.trend > 0" [class.negative]="stat.trend < 0">
-        <span *ngIf="stat.trend > 0">↑</span>
-        <span *ngIf="stat.trend < 0">↓</span>
-        {{ Math.abs(stat.trend) }}%
-      </div>
+  
+  <div class="features-grid">
+    <div class="feature-card-wrapper">
+      <jhi-feature-box [feature]="professional"></jhi-feature-box>
+    </div>
+    
+    <div class="feature-card-wrapper">
+      <jhi-feature-box [feature]="patient"></jhi-feature-box>
+    </div>
+    
+    <div class="feature-card-wrapper">
+      <jhi-feature-box [feature]="vendor"></jhi-feature-box>
+    </div>
+    
+    <div class="feature-card-wrapper">
+      <jhi-feature-box [feature]="admin"></jhi-feature-box>
     </div>
   </div>
 
