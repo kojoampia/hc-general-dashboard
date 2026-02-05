@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Feature } from 'app/entities/GeneralService/feature/feature.model';
-import { FileViewerComponent } from 'app/widgets';
 
 @Component({
   selector: 'jhi-feature-box',
@@ -14,9 +12,8 @@ export class FeatureBoxComponent implements OnInit {
   featureBox = '';
   featureName?: string;
   featureItem?: string;
-  private isOpen = false;
 
-  constructor(private router: Router, private modalService: NgbModal) {}
+  constructor(private router: Router) {}
 
 
   ngOnInit(): void {

@@ -312,6 +312,37 @@
         background: linear-gradient(135deg, #6b8e23, #9acd32);
         box-shadow: 0 8px 25px rgba(107, 142, 35, 0.6);
     }
+  }
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+  
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
+}
+
+/* Professional Theme - Teal Gradient */
+.professional {
+  .feature-header {
+    background: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+  }
+  
+  .professionalItem {
+    background: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+  }
 }
 
 .patientItem {
@@ -359,6 +390,7 @@
     }
 }
 
+/* Vendor Theme - Dark Slate Gradient */
 .vendor {
     padding: 20px;
     margin: 20px 5% 30px 5%;
@@ -478,6 +510,7 @@
     }
 }
 
+/* Admin Theme - Light Sea Green Gradient */
 .admin {
     padding: 20px;
     margin: 20px 5% 30px 5%;
