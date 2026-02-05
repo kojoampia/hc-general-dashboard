@@ -26,8 +26,92 @@
     </div>
   </div>
 
-  <div class="healthconnect-box">
-    <div class="healthconnect">
+  <!-- Feature Cards Grid -->
+  <div class="features-grid">
+    <!-- Professional Card -->
+    <div class="feature-card professional-card" (click)="openFeature(professional)">
+      <div class="card-header">
+        <div class="card-icon">👨‍⚕️</div>
+        <h2 class="card-title">{{ professional.name }}</h2>
+      </div>
+      <div class="card-body">
+        <div class="feature-items">
+          <div class="feature-item" *ngFor="let item of professional.items" (click)="openFeature(item); $event.stopPropagation()">
+            <span class="item-icon">▸</span>
+            <span class="item-name">{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span class="item-count">{{ professional.items?.length }} {{ professional.items?.length === 1 ? 'Feature' : 'Features' }}</span>
+        <span class="arrow">→</span>
+      </div>
     </div>
-  </div>  
+
+    <!-- Patient Card -->
+    <div class="feature-card patient-card" (click)="openFeature(patient)">
+      <div class="card-header">
+        <div class="card-icon">🏥</div>
+        <h2 class="card-title">{{ patient.name }}</h2>
+      </div>
+      <div class="card-body">
+        <div class="feature-items">
+          <div class="feature-item" *ngFor="let item of patient.items" (click)="openFeature(item); $event.stopPropagation()">
+            <span class="item-icon">▸</span>
+            <span class="item-name">{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span class="item-count">{{ patient.items?.length }} {{ patient.items?.length === 1 ? 'Feature' : 'Features' }}</span>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+
+    <!-- Vendor Card -->
+    <div class="feature-card vendor-card" (click)="openFeature(vendor)">
+      <div class="card-header">
+        <div class="card-icon">🏢</div>
+        <h2 class="card-title">{{ vendor.name }}</h2>
+      </div>
+      <div class="card-body">
+        <div class="feature-items">
+          <div class="feature-item" *ngFor="let item of vendor.items" (click)="openFeature(item); $event.stopPropagation()">
+            <span class="item-icon">▸</span>
+            <span class="item-name">{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span class="item-count">{{ vendor.items?.length }} {{ vendor.items?.length === 1 ? 'Feature' : 'Features' }}</span>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+
+    <!-- Admin Card -->
+    <div class="feature-card admin-card" (click)="openFeature(admin)">
+      <div class="card-header">
+        <div class="card-icon">⚙️</div>
+        <h2 class="card-title">{{ admin.name }}</h2>
+      </div>
+      <div class="card-body">
+        <div class="feature-items">
+          <div class="feature-item" *ngFor="let item of admin.items" (click)="openFeature(item); $event.stopPropagation()">
+            <span class="item-icon">▸</span>
+            <span class="item-name">{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <span class="item-count">{{ admin.items?.length }} {{ admin.items?.length === 1 ? 'Feature' : 'Features' }}</span>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Health Connect Branding -->
+  <div class="branding-section">
+    <div class="healthconnect-logo"></div>
+    <p class="branding-text">Powered by HealthConnect Platform</p>
+  </div>
 </div>
