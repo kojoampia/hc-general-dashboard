@@ -1,362 +1,185 @@
+/* ==========================================================================
+Modern Feature Box Styles with Gradient Design
+========================================================================== */
 
-.professional {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid teal;
-    height: 200px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.professionalName {
-    transform: rotate(-90deg);
-    background-color: teal;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: teal;
-    }
+.modern-feature-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
 }
 
-.professionalItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-    border-radius: 15px;
-    background-color: teal;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: teal;
-    }
+.feature-header {
+  padding: 2rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    pointer-events: none;
+  }
 }
 
-
-.feature {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid teal;
-    height: 200px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.featureName {
-    transform: rotate(-90deg);
-    background-color: teal;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 90px;
-    height: 40%;
-    width: 266px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: teal;
-    }
+.feature-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
-.featureItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-    border-radius: 15px;
-    background-color: teal;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: teal;
-    }
+.feature-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(248, 249, 250, 0.5);
+  flex: 1;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-    .feature {
-        padding-right: 5px;
-        margin-top: 5%;
-        margin-left: 5%;
-        margin-right: 5%;
-        border: 5px solid teal;
-        height: 200px;
-        max-width: 100%;
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        border-radius: 10px;
-        background-size: contain;
+.feature-item-card {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:hover {
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    &::before {
+      opacity: 1;
     }
     
-.featureName {
-    transform: rotate(-90deg);
-    background-color: teal;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 90px;
-    height: 50%;
-    width: 200px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -15px;
-    background-size: contain;
+    .item-name {
+      transform: scale(1.05);
+    }
+  }
+  
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
-.featureItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-    border-radius: 15px;
-    background-color: teal;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-}
+.item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+  
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 }
 
+/* Professional Theme - Teal Gradient */
+.professional {
+  .feature-header {
+    background: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+  }
+  
+  .professionalItem {
+    background: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+  }
+}
+
+/* Patient Theme - Green Gradient */
 .patient {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid darkolivegreen;
-    height: 200px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.patientName {
-    transform: rotate(-90deg);
-    background-color: darkolivegreen;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: darkolivegreen;
-    }
+  .feature-header {
+    background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%);
+  }
+  
+  .patientItem {
+    background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%);
+  }
 }
 
-.patientItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-    border-radius: 15px;
-    background-color: darkolivegreen;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: darkolivegreen;
-    }
-}
-
+/* Vendor Theme - Dark Slate Gradient */
 .vendor {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid darkslategray;
-    height: 200px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.vendorName {
-    transform: rotate(-90deg);
-    background-color: darkslategray;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: darkslategray;
-    }
+  .feature-header {
+    background: linear-gradient(135deg, #2f4f4f 0%, #708090 100%);
+  }
+  
+  .vendorItem {
+    background: linear-gradient(135deg, #2f4f4f 0%, #708090 100%);
+  }
 }
 
-.vendorItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-    border-radius: 15px;
-    background-color: darkslategray;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: darkslategray;
-    }
-}
-
+/* Admin Theme - Light Sea Green Gradient */
 .admin {
-    padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 5px solid lightseagreen;
-    height: 200px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    background-size: contain;
-}
-.adminName {
-    transform: rotate(-90deg);
-    background-color: lightseagreen;
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    line-height: 66px;
-    height: 40%;
-    width: 264px;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: -60px;
-    background-size: contain;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1) rotate(-90deg);
-        background-color: white;
-        color: lightseagreen;
-    }
+  .feature-header {
+    background: linear-gradient(135deg, #20b2aa 0%, #48d1cc 100%);
+  }
+  
+  .adminItem {
+    background: linear-gradient(135deg, #20b2aa 0%, #48d1cc 100%);
+  }
 }
 
-.adminItem {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: x-large;
-    color: white;
-    border-radius: 15px;
-    background-color: lightseagreen;
-    width: 25%;
-    height: 150px;
-    line-height: 150px;
-    text-align: center;
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-    margin-left: 5px;
-    background-size: contain;
-    cursor: pointer;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feature-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+  .feature-header {
+    padding: 1.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+  }
+}
 
-    &:hover {
-        transform: scale(1.1);
-        background-color: white;
-        color: lightseagreen;
-    }
+@media (max-width: 480px) {
+  .feature-items-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 *:focus {
