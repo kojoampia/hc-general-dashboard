@@ -1,0 +1,12 @@
+{
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "node -e \"const d=JSON.parse(require('fs').readFileSync(0,'utf8'));const f=(d.tool_input&&(d.tool_input.filePath||d.tool_input.path))||'';if(/\\\\.(ts|html|scss|css)$/.test(f)){const path=require('path');const root=f.replace(/[\\\\/]src[\\\\/].*/,'');const {execSync}=require('child_process');const rel=path.relative(root,f);const errs=[];try{execSync('npm run prettier:check -- --check '+JSON.stringify(rel),{cwd:root,stdio:'pipe'})}catch(e){errs.push('prettier: run npm run prettier:format');}try{execSync('npm run lint -- '+JSON.stringify(rel),{cwd:root,stdio:'pipe'})}catch(e){errs.push('lint: run npm run lint:fix');}if(errs.length){process.stdout.write(JSON.stringify({systemMessage:'[frontend-format-check] '+errs.join('; ')}));}}\"",
+        "timeout": 30
+      }
+    ]
+  }
+}

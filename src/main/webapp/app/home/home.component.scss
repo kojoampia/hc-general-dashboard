@@ -565,7 +565,7 @@ body.dark-mode {
 @media (prefers-contrast: high) {
   .feature-card {
     border: 3px solid currentColor;
-Main page styles - Modern Animated Dashboard
+/* Main page styles - Modern Animated Dashboard */
 
 @keyframes gradientShift {
   0% {
@@ -597,6 +597,8 @@ Main page styles - Modern Animated Dashboard
   }
   100% {
     background-position: 1000px 0;
+  }
+}
   }
 }
 
