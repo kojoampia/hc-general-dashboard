@@ -20,16 +20,14 @@ export class ChatFaqComponent implements OnInit {
   ngOnInit(): void {
     this.faqCategoryService.query().subscribe(
       categories => {
-        const tempFaqCategoryList = categories.body || [];
+        const tempFaqCategoryList = categories.body ?? [];
         this.faqService.query().subscribe(
           faqs => {
-            this.faqList = faqs.body || [];
-            if (tempFaqCategoryList) {
-              this.faqCategoryList = [];
-              for (const cat of tempFaqCategoryList) {
-                if (this.getFaqCount(cat) > 0) {
-                  this.faqCategoryList.push(cat);
-                }
+            this.faqList = faqs.body ?? [];
+            this.faqCategoryList = [];
+            for (const cat of tempFaqCategoryList) {
+              if (this.getFaqCount(cat) > 0) {
+                this.faqCategoryList.push(cat);
               }
             }
           },
@@ -49,26 +47,11 @@ export class ChatFaqComponent implements OnInit {
   }
 
   public getFaqCount(category: IFaqCategory): number {
-    const count = this.faqList?.filter(faq => {
-      if (category?.label === category.label) {
-        return true;
-      } else {
-        return false;
-      }
-    }).length;
-
-    return count || 0;
+    const count = this.faqList?.filter(faq => faq.category === category.label).length;
+    return count ?? 0;
   }
 
   public getSelectedCategoryFaqs(): IFrequentAsked[] {
-    return (
-      this.faqList?.filter(faq => {
-        if (faq?.category === this.selectedCategory?.label) {
-          return true;
-        } else {
-          return false;
-        }
-      }) || []
-    );
+    return this.faqList?.filter(faq => faq.category === this.selectedCategory?.label) ?? [];
   }
 }

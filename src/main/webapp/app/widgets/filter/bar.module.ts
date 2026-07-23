@@ -4,9 +4,7 @@ import { BarComponent } from './bar.component';
 
 @NgModule({
   imports: [SharedModule],
-  declarations: [
-    BarComponent,
-  ],
-  exports: [BarComponent]
+  declarations: [BarComponent],
+  exports: [BarComponent],
 })
 export class BarModule {}

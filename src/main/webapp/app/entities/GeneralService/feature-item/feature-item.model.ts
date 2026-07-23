@@ -7,7 +7,13 @@ export interface IFeatureItem {
 }
 
 export class FeatureItem implements IFeatureItem {
-  constructor(public id?: string, public name?: string | null, public url?: string | null, public photoContentType?: string | null, public photo?: string | null) {}
+  constructor(
+    public id?: string,
+    public name?: string | null,
+    public url?: string | null,
+    public photoContentType?: string | null,
+    public photo?: string | null
+  ) {}
 }
 
 export function getFeatureItemIdentifier(featureItem: IFeatureItem): string | undefined {

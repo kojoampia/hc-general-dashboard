@@ -37,18 +37,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     { icon: '👥', value: '2,547', label: 'Active Users', color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', trend: 12.5 },
     { icon: '📅', value: '1,234', label: 'Appointments', color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', trend: 8.3 },
     { icon: '📊', value: '98.5%', label: 'System Uptime', color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', trend: 2.1 },
-    { icon: '⚡', value: '156ms', label: 'Avg Response', color: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', trend: -5.2 }
+    { icon: '⚡', value: '156ms', label: 'Avg Response', color: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', trend: -5.2 },
   ];
 
   private readonly destroy$ = new Subject<void>();
-
 
   constructor(private accountService: AccountService, private router: Router) {
     this.professional.name = 'Professional';
     this.patient.name = 'Patient';
     this.vendor.name = 'Vendor';
     this.admin.name = 'Admin';
-    
+
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
     this.isDarkMode = savedTheme === 'dark';
@@ -72,7 +71,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.initPatient();
     this.initVendor();
     this.initAdmin();
-
   }
 
   initProfessional(): void {
@@ -106,14 +104,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.vendor.id = 'vendor';
     this.vendor.name = 'Vendor';
     this.vendor.url = '/features';
-    
+
     this.vendor.items = [];
     this.vendor.items.push(this.getFeatureItem('vendor_user-account', 'UserAccount', this.vendor.url));
     this.vendor.items.push(this.getFeatureItem('vendor_dashboard', 'Dashboard', this.vendor.url));
     this.vendor.items.push(this.getFeatureItem('vendor_services', 'Services', this.vendor.url));
     this.vendor.items.push(this.getFeatureItem('vendor_clients', 'Clients', this.vendor.url));
     this.vendor.items.push(this.getFeatureItem('vendor_messaging', 'Messaging', this.vendor.url));
-    
   }
 
   initAdmin(): void {
@@ -127,7 +124,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.admin.items.push(this.getFeatureItem('admin_roster', 'Roster', this.admin.url));
     this.admin.items.push(this.getFeatureItem('admin_team', 'Team', this.admin.url));
     this.admin.items.push(this.getFeatureItem('admin_messaging', 'Messaging', this.admin.url));
-
   }
 
   login(): void {
@@ -151,17 +147,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getFeatureItem(fid: string, fname: string, url: string): FeatureItem {
-    return { 
-      ...new FeatureItem(), 
+    return {
+      ...new FeatureItem(),
       id: fid,
       name: fname,
       url: url ? url : '/content/' + fname.toLowerCase(),
-    }
+    };
   }
 
   openFeature(feature: Feature | FeatureItem): void {
     this.router.navigate([feature.url], { queryParams: { name: feature.id } });
   }
-
-
 }

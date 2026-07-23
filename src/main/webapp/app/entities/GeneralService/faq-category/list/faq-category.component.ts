@@ -65,5 +65,4 @@ export class FaqCategoryComponent implements OnInit {
   trackId(index: number, item: IFaqCategory): string {
     return item.id!;
   }
-
 }

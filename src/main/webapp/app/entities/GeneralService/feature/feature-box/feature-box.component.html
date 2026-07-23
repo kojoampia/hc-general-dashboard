@@ -1,12 +1,10 @@
 <div [class]="'modern-feature-card ' + featureBox" *ngIf="feature">
-    <div class="feature-header" (click)="openFeature(feature)">
-        <h2 [class]="'feature-title ' + featureName">{{ feature?.name }}</h2>
+  <div class="feature-header" (click)="openFeature(feature)">
+    <h2 [class]="'feature-title ' + featureName">{{ feature?.name }}</h2>
+  </div>
+  <div class="feature-items-grid">
+    <div [class]="'feature-item-card ' + featureItem" *ngFor="let item of feature?.items" (click)="openFeature(item)">
+      <span class="item-name">{{ item.name }}</span>
     </div>
-    <div class="feature-items-grid">
-        <div [class]="'feature-item-card ' + featureItem" 
-             *ngFor="let item of feature?.items" 
-             (click)="openFeature(item)">
-            <span class="item-name">{{item.name}}</span>
-        </div>
-    </div>
+  </div>
 </div>

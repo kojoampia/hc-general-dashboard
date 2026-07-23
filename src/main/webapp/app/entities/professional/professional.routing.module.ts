@@ -5,7 +5,7 @@ import { ProfessionalComponent } from './professional.component';
 const professionalRoute: Routes = [
   {
     path: '',
-    component: ProfessionalComponent
+    component: ProfessionalComponent,
   },
 ];
 

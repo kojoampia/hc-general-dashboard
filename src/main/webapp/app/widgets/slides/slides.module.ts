@@ -5,10 +5,7 @@ import { SlidesComponent } from './slides.component';
 
 @NgModule({
   imports: [SharedModule],
-  declarations: [
-    SlidesComponent,
-    SlideSelectorComponent,
-  ],
-  exports: [SlidesComponent, SlideSelectorComponent]
+  declarations: [SlidesComponent, SlideSelectorComponent],
+  exports: [SlidesComponent, SlideSelectorComponent],
 })
 export class SlidesModule {}

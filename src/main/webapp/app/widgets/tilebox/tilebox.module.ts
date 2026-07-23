@@ -5,10 +5,8 @@ import { TileboxComponent } from './tilebox.component';
 
 @NgModule({
   imports: [SharedModule, NguCarouselModule],
-  declarations: [
-    TileboxComponent,
-  ],
+  declarations: [TileboxComponent],
   exports: [TileboxComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class TileboxModule {}

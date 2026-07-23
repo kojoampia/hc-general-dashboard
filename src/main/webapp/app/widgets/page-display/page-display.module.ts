@@ -4,9 +4,7 @@ import { PageDisplayComponent } from './page-display.component';
 
 @NgModule({
   imports: [SharedModule],
-  declarations: [
-    PageDisplayComponent,
-  ],
-  exports: [PageDisplayComponent]
+  declarations: [PageDisplayComponent],
+  exports: [PageDisplayComponent],
 })
 export class PageDisplayModule {}

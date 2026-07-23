@@ -65,5 +65,4 @@ export class FrequentAskedComponent implements OnInit {
   trackId(index: number, item: IFrequentAsked): string {
     return item.id!;
   }
-
 }

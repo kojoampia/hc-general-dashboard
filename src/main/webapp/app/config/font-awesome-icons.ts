@@ -90,6 +90,6 @@ export const fontAwesomeIcons = [
   faInfoCircle,
   faMoneyBill,
   faQuestion,
-  faQ
+  faQ,
   // jhipster-needle-add-icon-import
 ];

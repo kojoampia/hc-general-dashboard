@@ -25,9 +25,9 @@ export class ConverseComponent implements OnInit, OnDestroy, AfterViewChecked {
   public success = false;
   @ViewChild('chatScreen') private chatScreen: ElementRef = {} as ElementRef;
   public autoScrollError = '';
-  registrationInvalid = false;
+  public registrationInvalid = false;
 
-  registerForm = this.fb.group({
+  public registerForm = this.fb.group({
     firstName: [
       '',
       [
@@ -49,15 +49,8 @@ export class ConverseComponent implements OnInit, OnDestroy, AfterViewChecked {
     email: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(254), Validators.email]],
   });
 
-  constructor(
-    private chatService: ConversationService,
-    private fb: FormBuilder,
-    private localStorageService: LocalStorageService
-  ) {
-    this.messages = this.localStorageService.retrieve('messages');
-    if (!this.messages) {
-      this.messages = [];
-    }
+  constructor(private chatService: ConversationService, private fb: FormBuilder, private localStorageService: LocalStorageService) {
+    this.messages = this.localStorageService.retrieve('messages') ?? [];
   }
 
   ngAfterViewChecked(): void {
@@ -92,9 +85,9 @@ export class ConverseComponent implements OnInit, OnDestroy, AfterViewChecked {
 
   initMessage(): void {
     this.clear();
-    const name = this.client?.firstName || 'a';
+    const name = this.client?.firstName ?? 'a';
     const fName = name.charAt(0).toUpperCase() + name.slice(1);
-    const welcomeMessage = 'Hello ' + fName + ', how may I help you?';
+    const welcomeMessage = `Hello ${fName}, how may I help you?`;
     const serviceName = 'Customer Service';
     setTimeout(() => {
       this.messages.push({
@@ -134,7 +127,7 @@ export class ConverseComponent implements OnInit, OnDestroy, AfterViewChecked {
 
   send(): void {
     if (this.client && this.message) {
-      const clientName = this.client.firstName + ' ' + this.client.lastName;
+      const clientName = `${this.client.firstName ?? ''} ${this.client.lastName ?? ''}`;
       const messageToken = {
         ...new ChatMessage(),
         name: clientName,
@@ -151,6 +144,7 @@ export class ConverseComponent implements OnInit, OnDestroy, AfterViewChecked {
   }
 
   register(): void {
+.
     this.registrationInvalid = true;
     if (this.registerForm.valid) {
       this.registrationInvalid = false;

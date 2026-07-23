@@ -15,7 +15,7 @@ type EntityArrayResponseType = HttpResponse<IChatUser[]>;
 
 @Injectable({ providedIn: 'root' })
 export class ConversationService {
-  public resourceUrl = SERVER_API_URL + 'api/chat-users';
+  public resourceUrl = `${SERVER_API_URL}api/chat-users`;
   // Chat connection
   private privateChannelSubscription: Subscription | null = null;
   private privateChannelListenerSubject: Subject<IChatMessage> = new Subject();
@@ -31,10 +31,7 @@ export class ConversationService {
   }
 
   hasSubscribed(): boolean {
-    if (this.privateChannelSubscription) {
-      return true;
-    }
-    return false;
+    return !!this.privateChannelSubscription;
   }
 
   disconnect(): void {
@@ -46,7 +43,7 @@ export class ConversationService {
     if (this.privateChannelSubscription) {
       return;
     }
-    const destination = '/topic/' + email;
+    const destination = `/topic/${email}`;
     this.privateChannelSubscription = this.websocketService.getConnection().subscribe(() => {
       if (this.websocketService.stompClient()) {
         this.websocketService.stompClient().subscribe(destination, (data: Stomp.Message) => {
@@ -127,7 +124,7 @@ export class ConversationService {
 
   protected convertDateFromClient(chatUser: IChatUser): IChatUser {
     const copy: IChatUser = Object.assign({}, chatUser, {
-      createdDate: chatUser.createdDate && chatUser.createdDate.isValid() ? chatUser.createdDate.toJSON() : undefined,
+      createdDate: chatUser.createdDate?.isValid() ? chatUser.createdDate.toJSON() : undefined,
     });
     return copy;
   }

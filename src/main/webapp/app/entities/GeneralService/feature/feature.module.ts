@@ -7,10 +7,7 @@ import { FileViewerModule } from 'app/widgets/file-viewer/file-viewer.module';
 
 @NgModule({
   imports: [SharedModule, FeatureRoutingModule, FileViewerModule],
-  declarations: [
-    FeatureComponent, 
-    FeatureDetailComponent
-  ],
+  declarations: [FeatureComponent, FeatureDetailComponent],
   entryComponents: [],
 })
 export class GeneralServiceFeatureModule {}

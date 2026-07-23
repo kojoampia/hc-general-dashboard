@@ -15,17 +15,17 @@ import { TileboxModule } from 'app/widgets/tilebox/tilebox.module';
 
 @NgModule({
   imports: [
-    SharedModule, 
-    RouterModule.forChild([HOME_ROUTE]), 
-    FeatureBoxModule, 
-    FileViewerModule, 
+    SharedModule,
+    RouterModule.forChild([HOME_ROUTE]),
+    FeatureBoxModule,
+    FileViewerModule,
     BarModule,
     InfoBoxModule,
     InfoBoxSmallModule,
     PageDisplayModule,
     SlidesModule,
     TileboxModule,
-],
+  ],
   declarations: [HomeComponent],
 })
 export class HomeModule {}

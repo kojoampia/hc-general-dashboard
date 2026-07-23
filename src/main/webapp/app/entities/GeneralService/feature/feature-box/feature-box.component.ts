@@ -5,16 +5,15 @@ import { Feature } from 'app/entities/GeneralService/feature/feature.model';
 @Component({
   selector: 'jhi-feature-box',
   templateUrl: './feature-box.component.html',
-  styleUrls: ['./feature-box.component.scss']
+  styleUrls: ['./feature-box.component.scss'],
 })
 export class FeatureBoxComponent implements OnInit {
-  @Input() feature?:Feature;
+  @Input() feature?: Feature;
   featureBox = '';
   featureName?: string;
   featureItem?: string;
 
   constructor(private router: Router) {}
-
 
   ngOnInit(): void {
     const colorName = this.feature?.name?.toLowerCase();
@@ -24,10 +23,7 @@ export class FeatureBoxComponent implements OnInit {
   }
 
   openFeature(feature: Feature): void {
-    // this.router.navigate([feature.url], { queryParams: { 'id': feature.id , 'feature': feature } }); 
+    // this.router.navigate([feature.url], { queryParams: { 'id': feature.id , 'feature': feature } });
     this.router.navigate([feature.url], { queryParams: { name: feature.id } });
   }
-
-
-
 }

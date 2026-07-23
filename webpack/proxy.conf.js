@@ -2,7 +2,7 @@ function setupProxy({ tls }) {
   const conf = [
     {
       context: ['/api', '/services', '/management', '/v3/api-docs', '/h2-console', '/auth', '/health'],
-  //    target: `http${tls ? 's' : ''}://localhost:5514`,
+      //    target: `http${tls ? 's' : ''}://localhost:5514`,
       target: `https://healthconnect.jojoaddison.net`,
       secure: false,
       changeOrigin: tls,

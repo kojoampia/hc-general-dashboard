@@ -4,9 +4,7 @@ import { InfoBoxSmallComponent } from './info-box-small.component';
 
 @NgModule({
   imports: [SharedModule],
-  declarations: [
-    InfoBoxSmallComponent,
-  ],
-  exports: [InfoBoxSmallComponent]
+  declarations: [InfoBoxSmallComponent],
+  exports: [InfoBoxSmallComponent],
 })
 export class InfoBoxSmallModule {}

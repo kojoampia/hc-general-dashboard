@@ -75,5 +75,4 @@ export class FeatureItemComponent implements OnInit {
   openFile(base64String: string, contentType: string | null | undefined): void {
     return this.dataUtils.openFile(base64String, contentType);
   }
-
 }

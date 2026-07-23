@@ -21,7 +21,7 @@ Navbar
 }
 .navbar-version {
   font-size: 0.65em;
-  color:  #ddd; /*$navbar-dark-color;*/
+  color: #ddd; /*$navbar-dark-color;*/
   text-transform: none;
 }
 
@@ -32,17 +32,17 @@ Navbar
 
 .navbar {
   padding: 0.2rem 1rem;
-  color: $primary; 
+  color: $primary;
   text-transform: uppercase;
   a.nav-link {
     font-weight: 400;
   }
-  a:hover, .active {
+  a:hover,
+  .active {
     background-color: $primary;
     color: black !important;
     border-radius: 10px;
   }
-  
 }
 .active {
   background-color: $primary;
@@ -56,7 +56,7 @@ Logo styles
 .logo-img {
   height: 45px;
   width: 45px;
-  color: $primary; 
+  color: $primary;
   display: inline-block;
   vertical-align: middle;
   background: url('../../../content/images/logo.png') no-repeat center center;

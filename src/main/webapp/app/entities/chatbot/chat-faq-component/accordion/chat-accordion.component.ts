@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IFrequentAsked } from 'app/entities/GeneralService/frequent-asked/frequent-asked.model';
 
 @Component({
@@ -6,14 +6,10 @@ import { IFrequentAsked } from 'app/entities/GeneralService/frequent-asked/frequ
   templateUrl: './chat-accordion.component.html',
   styleUrls: ['./chat-accordion.component.scss'],
 })
-export class ChatAccordionComponent implements OnInit {
+export class ChatAccordionComponent {
   @Input() faq?: IFrequentAsked;
 
   isPanelOpen = false;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   togglePanel(): void {
     this.isPanelOpen = !this.isPanelOpen;

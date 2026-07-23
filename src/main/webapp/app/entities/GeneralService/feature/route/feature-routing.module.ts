@@ -5,27 +5,27 @@ import { FeatureComponent } from '../list/feature.component';
 const featureRoute: Routes = [
   {
     path: '',
-    component: FeatureComponent
+    component: FeatureComponent,
   },
   {
     path: ':id',
-    component: FeatureComponent
+    component: FeatureComponent,
   },
   {
     path: 'professional/:id',
-    component: FeatureComponent
+    component: FeatureComponent,
   },
   {
     path: 'patient/:id',
-    component: FeatureComponent
+    component: FeatureComponent,
   },
   {
     path: 'vendor/:id',
-    component: FeatureComponent
+    component: FeatureComponent,
   },
   {
     path: 'admin/:id',
-    component: FeatureComponent
+    component: FeatureComponent,
   },
 ];
 

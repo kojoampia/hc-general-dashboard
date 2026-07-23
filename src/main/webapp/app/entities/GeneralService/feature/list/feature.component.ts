@@ -23,21 +23,18 @@ export class FeatureComponent implements OnInit {
   selectedName = 'Professional';
   safeUrl?: SafeHtml;
 
-
-
-  constructor(protected featureService: FeatureService, protected activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer,) {
+  constructor(protected featureService: FeatureService, protected activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {
     this.currentSearch = this.activatedRoute.snapshot.queryParams['search'] ?? '';
     const name = this.activatedRoute.snapshot.queryParams['name'] ?? 'Professional';
     this.setSelectedFeature(name);
   }
 
-
-  setSelectedFeature(name: string): void {    
+  setSelectedFeature(name: string): void {
     this.selectedFeature = name.toLowerCase();
     this.selectedName = name.charAt(0).toUpperCase() + name.slice(1);
     // Check if the name contains a '#' character
     // If it does, split the name and set selectedFeature and selectedName accordingly
-    if (name.indexOf('_') > 1){
+    if (name.indexOf('_') > 1) {
       const parts = name.split('_');
       this.selectedFeature = parts[0].toLowerCase();
       this.selectedName = parts[1].charAt(0).toUpperCase() + parts[1].slice(1);
